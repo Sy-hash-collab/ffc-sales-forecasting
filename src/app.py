@@ -100,9 +100,17 @@ def main():
         model = load_model()
         feature_names = load_features()
         metrics = load_metrics()
+    except FileNotFoundError as e:
+        st.error(f"Missing System File: {e}")
+        st.info("""
+            **How to fix:**
+            1. Ensure you have run `python src/data_generator.py` to create the dataset.
+            2. Ensure you have run `python src/model.py` to train the AI engine and save files.
+        """)
+        return
     except Exception as e:
-        st.error(f"Error loading system: {e}")
-        st.warning("Please ensure data is generated and model is trained.")
+        st.error(f"System Error: {e}")
+        st.warning("Please verify your environment and dependencies.")
         return
 
     # Sidebar

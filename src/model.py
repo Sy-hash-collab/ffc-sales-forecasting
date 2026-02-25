@@ -50,18 +50,27 @@ def train_model():
     print(f"Test RMSE: {rmse:.2f}")
     print(f"Test MAPE: {mape:.2%}")
     
-    # Save metrics for Dashboard
-    import json
+    # Save model, features and metrics
     model_dir = 'models'
+    os.makedirs(model_dir, exist_ok=True)
+    
+    # 1. Save Metrics
     metrics = {
         'rmse': round(rmse, 2),
         'mape': round(mape, 4),
         'training_date': datetime.now().strftime('%Y-%m-%d %H:%M')
     }
-    with open(os.path.join(model_dir, 'metrics.json'), 'wb') as f:
-        f.write(json.dumps(metrics).encode('utf-8'))
+    with open(os.path.join(model_dir, 'metrics.json'), 'w') as f:
+        json.dump(metrics, f)
         
-    print("Model and metrics saved successfully.")
+    # 2. Save Trained Model (Used by Dashboard)
+    model.save_model(os.path.join(model_dir, 'xgboost_sales.json'))
+    
+    # 3. Save Feature Names (Used by Dashboard for consistency)
+    with open(os.path.join(model_dir, 'features.pkl'), 'wb') as f:
+        pickle.dump(features, f)
+        
+    print(f"Success: Model, features, and metrics saved to {model_dir}/")
 
 if __name__ == "__main__":
     train_model()
