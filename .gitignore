@@ -1,0 +1,21 @@
+# Virtual Environment
+ffc_sales_project/
+venv/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Streamlit Cache
+.streamlit/
+.streamlit/config.toml
+
+# Data & Models (Optional: keep if you want them on GitHub)
+# data/*.csv
+# models/*.json
+# models/*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
