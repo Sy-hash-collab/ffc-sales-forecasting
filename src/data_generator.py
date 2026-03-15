@@ -3,7 +3,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import os
 
-def generate_synthetic_data(start_date='2021-01-01', end_date='2023-12-31', num_stores=5):
+def generate_synthetic_data(start_date='2023-01-01', end_date='2026-03-14', num_stores=5):
     """
     Generates synthetic fertilizer sales data for FFC.
     Simulates seasonal peaks for Rabi (Check Oct-Dec) and Kharif (Check May-Jul) crops.

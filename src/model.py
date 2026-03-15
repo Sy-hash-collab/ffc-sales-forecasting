@@ -3,6 +3,7 @@ import xgboost as xgb
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 import pickle
 import os
+import json
 from processing import prepare_data
 from datetime import datetime
 
@@ -11,10 +12,10 @@ def train_model():
     df = prepare_data('data/ffc_sales.csv')
     
     # Train/Test Split based on time
-    # Train: 2021-2022
-    # Test: 2023
-    train = df[df['year'] < 2023]
-    test = df[df['year'] == 2023]
+    # Train: 2023-2025
+    # Test: 2026
+    train = df[df['year'] < 2026]
+    test = df[df['year'] == 2026]
     
     features = [col for col in df.columns if col not in ['Date', 'Sales', 'Store']]
     target = 'Sales'
