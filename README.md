@@ -5,14 +5,14 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Enterprise_UI-0A3F20?style=for-the-badge&logo=Streamlit&logoColor=white)
 ![Analytics](https://img.shields.io/badge/Supply_Chain_Analytics-2E8B57?style=for-the-badge)
 
-## 📌 Executive Summary
+##  Executive Summary
 Efficient supply chain management in the fertilizer industry strongly relies on predicting seasonal demand. Running out of stock precisely when the sowing window opens can severely damage crop yields and compromise institutional reputation. 
 
 This project establishes an **Enterprise Time-Series Forecasting framework**, specifically conceptualized for the Fauji Fertilizer Company (FFC) operational ecosystem. It deploys an advanced Extreme Gradient Boosting (XGBoost) architecture to predict 30-day forward, store-level sales volumes. This transitions warehousing strategy from reactive replenishment to predictive, data-driven stock allocation.
 
 ---
 
-## 🚀 Core Architecture & Capabilities
+##  Core Architecture & Capabilities
 
 ### 1. Domain-Specific Data Synthesis (`src/data_generator.py`)
 To ensure complete confidentiality of proprietary corporate data while maintaining architectural validity, this system employs a robust mathematical data generator. 
@@ -38,7 +38,7 @@ The predictive engine is surfaced via a high-performance **Streamlit & Plotly** 
 
 ---
 
-## 🛠️ Deployment Instructions
+##  Deployment Instructions
 
 ### 1. Environment Initialization
 Clone the repository to your local operating system and configure the Python virtual environment:
@@ -65,9 +65,8 @@ Initialize the data pipeline, train the ML architecture, and launch the user int
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 This codebase is an independent technical demonstration of predictive supply chain modeling capabilities. It successfully utilizes advanced synthetic data engines to mimic corporate operational logic while ensuring the complete confidentiality and security of any actual proprietary institutional data.
 
 ---
-**Technical Development Lead: [Your Name Here]**  
-*Predictive Analytics Solutions for Agricultural Supply Chains* | *[Link to your LinkedIn Profile]*
+
